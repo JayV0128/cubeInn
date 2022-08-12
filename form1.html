@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>CubeInn</title>
+</head>
+<link rel="icon" type="image/x-icon" href="favicon.jpeg">
+<link rel="stylesheet" href="form1.css">
+<link rel="stylesheet" href="index.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<body>
+    <script type="text/javascript" src="form1.js"></script>
+    <div>
+        <div class="container" id="container">
+            <div class="nav">
+                <button class="form"><a href="index.html">&nbsp;Home&nbsp;</a></button>
+                <div class="search_box">
+                    <input type="text" placeholder=" Search for Items ">
+                    <button type="submit">
+                        <x class="fa fa-search"></x>
+                    </button>
+                </div>
+            </div>
+            <div class="header" id="header">
+                <a href="index.html"><img src="Logo.jpeg" id="logo"></a>
+                <h2 id="title"><strong>CubeInn</strong></h2>
+            </div>
+        </div>
+    </div>
+    <form method="get" enctype="multipart/form-data" id="sellProdict" class="sellform">
+        <div class="DoP">
+            <fieldset>
+                <legend>Details of your Product</legend>
+                <div class="productName">
+                    <div class="productWord">Product Name :</div>
+                    <input type="text" name="productname" id="productname" required="required" />
+                    <div class="error1" id="error1">*Please enter Product Name*</div>
+                </div>
+
+                <div class="brandName">
+                    <div class="brandWord">Brand :</div>
+                    <input list="allBrand" name="Brand" id="Brand" required="required">
+                    <datalist id="allBrand">
+                        <option value="Dior">
+                        <option value="YSL">
+                        <option value="MAC">
+                        <option value="Estee Lauder">
+                        <option value="Shiseido">
+                        <option value="L'Oréal">
+                        <option value="OLAY">
+                        <option value="LANCOME">
+                        <option value="CHANEL">
+                    </datalist>
+                    <div class="error2" id="error2"> *Please enter Brand Name*</div>
+                </div>
+
+                <div class="inputPrice">
+                    <div class="priceWord">Price : HK$</div>
+                    <input type="text" pattern="^\d*$" maxlength="8" id="Price" required="required" title="number only">
+                    <div class="numOnly" id="numOnly">*PLEASE ENTER THE PRODUCT PRICE*</div>
+                </div>
+
+                <div class="QTY">
+                    <div class="qtyWord">Quantity :</div><input type="number" id="Qty" class="Qty" required="required">
+                    <div class="error5" id="error5">*At least 1 Product*</div>
+                </div>
+
+                <div class="upload">Upload Photo :
+
+                    <input type="file" name="photo" id="upPhoto">
+                    <div class="emfile" id="emfile">*You Must Upload The Product Photo*</div>
+                </div>
+                <div class="descWord">
+                    <div class="descTitle">A good description can help you to sell the product faster</div>
+                    <div>
+                        <textarea id="desc1" rows="10" cols="70" name="Description" placeholder=" Description of your product...">
+                </textarea>
+                    </div>
+                </div>
+
+                Available delivery :
+                <!--checkboxs for transactions-->
+                <div class="tCheckbox">
+                    <input type="checkbox" id="1" name="transaction" value="FTF" checked />
+                    face-to-face transactions
+                    <input type="checkbox" id="1" name="transaction" value="SBP" />
+                    Send by post
+                    <input type="checkbox" id="1" name="transaction" value="PUP" />
+                    Pick up point
+                </div>
+
+            </fieldset>
+        </div>
+
+        <div class="Contact">
+            <fieldset>
+                <legend>Your Contact </legend>
+
+                <input type="radio" name="gender" id="Mr" value="MR">Mr
+                <input type="radio" name="gender" id="Ms" value="MS" checked>Ms
+                <input type="radio" name="gender" id="Mrs" value="MRS">Mrs
+
+                <div class="custName">
+                    <div class="nameError">
+                        <div class="error3" id="error3">*Please enter Last Name* </div>
+                        <div class="error4" id="error4">*Please enter First Name* </div>
+                    </div>
+                    Last Name: <input type="text" name="lName" id="lName" class="lName" required="required" pattern="[A-Z][a-z]*" title="The first character must be capital latter." placeholder=" e.g. Chan">
+
+                    First Name: <input type="text" name="fName" id="fName" placeholder=" e.g. Tai Man" required="required">
+                </div>
+
+                <div class="email">
+                    <div class="emailError">
+                        <div class="error6" id="error6">*Please enter Your email*</div>
+                        <div class="error7" id="error7">*The email Cannot be Empty*</div>
+                    </div>
+                    <div class="email2">
+                        <div class="emailWord">email address :</div>
+                        <input type="text" class="userEmail" id="userEmail" name="email" placeholder=" e.g. chantaiman" required="required" />@
+                        <input list="allEmails" name="allEmail" class="allEmail" id="allEmail" placeholder=" e.g. xxxx.com" required="required">
+                        <datalist id="allEmails">
+                            <option value="gmail.com">
+                            <option value="outlook.com">
+                            <option value="hotmail.com">
+                            <option value="qq.com">
+                            <option value="yahoo.com.hk">
+                        </datalist>
+                    </div>
+                </div>
+
+                <div class="phoneNo">
+                    <div class="phoneWord">Phone No :</div>
+                    <input type="text" pattern="[0-9]{8}" minlength="8" maxlength="8" id="sellerPhone" title="HongKong PhoneNo Only" placeholder=" +852" required>
+                    <div class="HKnoOnly" id="HKnoOnly">* Cannot Empty and Hong Kong Phone Number Only*</div>
+                </div>
+
+            </fieldset>
+        </div>
+        <input type="submit" value="Submit" class="submit" onclick="checkNull();" />
+        <input type="reset" value="Clear Form" class="clear" />
+    </form>
+    <div class="footer">
+        <div class="link">
+            <div class="site">SITE LINKS</div>
+            <span><a href="form1.html">Post</a></span>
+            <span>
+                <a href="https://www.dior.com/zh_hk?gclid=CjwKCAjw9e6SBhB2EiwA5myr9n86Y5lPXSos9Xm2vKFvb2dZYo0H3RRZ_utTg8gxBuHh_r3TmZZSiRoCoaMQAvD_BwE">Dior</a>
+            </span>
+            <span><a href="https://www.yslbeauty.com.hk/">YSL</a></span>
+            <span>
+                <a href="https://www.maccosmetics.com.hk/offer-details?gclid=CjwKCAjw9e6SBhB2EiwA5myr9tR12u2eMH65kAmWITXG6LlGMCfl1bfgPF1dQR6WpDC6MdF6MYCk4BoC58gQAvD_BwE&gclsrc=aw.ds">M.A.C</a>
+            </span>
+        </div>
+        <div class="follow">
+            <div class="follow1">Follow Us</div>
+            <div class="link1">
+                <a href="http://facebook.com"><img src="fb.png"></a>
+                <a href="http://line.me"><img src="line.png"></a>
+            </div>
+        </div>
+    </div>
+</body></html>

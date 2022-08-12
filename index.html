@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>CubeInn</title>
+    <link rel="icon" type="image/x-icon" href="favicon.jpeg">
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<!--call method to send out a welcome message when the user enters the webpage-->
+
+<body onLoad="start()">
+    <script src="index.js"></script>
+    <div class="container" id="container">
+        <div class="sidebar" id="sidebar">
+            <!--call method bar() and plus() to perform bar changes and close the sidebar back to the top-->
+            <button class="closeSide" onclick="bar(2);plus(2);">X</button>
+            <button class="form"><a href="form1.html">&nbsp;Post&nbsp;</a></button>
+        </div>
+        <div class="nav">
+            <div class="search_box">
+                <input type="text" placeholder=" Search for Items ">
+                <button type="submit">
+                    <!--create the search icon-->
+                    <x class="fa fa-search"></x>
+                </button>
+            </div>
+            <div class="Side">
+                <!--call method bar() and plus() to show bar changes and open the sidebar from the top-->
+                <button class="openSide" onclick="bar(1);plus(1);">
+                    <div class="bar1" id="one">+</div>
+                    <div class="bar2" id="two"></div>
+                    <div class="bar3" id="three"></div>
+                </button>
+            </div>
+        </div>
+        <div class="header" id="header">
+            <img src="Logo.jpeg" id="logo">
+            <h2 id="title"><strong>CubeInn</strong></h2>
+        </div>
+        <div class="about">
+            <div class="introduction">
+                <!--call method change() to change the photo in the right-hand side of the intro by mouse over and out-->
+                <h3 onmouseover="change(1)" onmouseout="change(2)">Welcome</h3>
+                <!--call method titlecol() to perform changes in the header and image by mouse over and mouse out-->
+                <p id="p" onmouseover="titlecol(1)" onmouseout="titlecol(2)">
+                    <strong><em>CubeInn</em></strong> provides you a platform for finding your favourite products from <strong>KOREA and JAPAN </strong>at the lowest price. You are welcome to enter keywords like names, types and brands of the products to search. If you want to sell your products, you are also recommended to upload your product descriptions with the images of product in the form. You will be welcome to check for the <strong>LATEST PRODUCTS and the BEST-SELLING PRODUCTS</strong> in CubeInn.
+                </p>
+            </div>
+            <div class="hello"><img src="hello.png" id="hello"></div>
+        </div>
+        <div class="article">
+            <div class="heading">
+                <h3 class="Latest"><strong>Latest Products</strong></h3>
+                <img src="new.png">
+            </div>
+            <!--call method pvideo() to show the video in the first image-->
+            <div class="content1" onmouseover="pvideo(1)" onmouseout="pvideo(2)">
+                <div>
+                    ROUGE PUR COUTURE LIPSTICK
+                </div>
+                <img src="lipstick.png" id="img1">
+                <iframe src="https://www.youtube.com/embed/MZ1ZwQzCcfU" name="video"></iframe>
+            </div>
+            <div class="content2">
+                <div>
+                    Miss Dior Eau de Parfum
+                </div>
+                <!--call method hold() to swap photos-->
+                <img src="dior.png" id="dior" onmouseover="hold(1)" onmouseout="hold(2)" onclick="hold(3)">
+            </div>
+            <div class="content3">
+                <div>
+                    MY TWEEDY
+                </div>
+                <a href="ProductDesc.html"><img src="MAC.png"></a>
+            </div>
+        </div>
+        <div class="footer">
+            <div class="link">
+                <div class="site">SITE LINKS</div>
+                <span><a href="form1.html">Form</a></span>
+                <span>
+                    <a href="https://www.dior.com/zh_hk?gclid=CjwKCAjw9e6SBhB2EiwA5myr9n86Y5lPXSos9Xm2vKFvb2dZYo0H3RRZ_utTg8gxBuHh_r3TmZZSiRoCoaMQAvD_BwE">Dior</a>
+                </span>
+                <span><a href="https://www.yslbeauty.com.hk/">YSL</a></span>
+                <span>
+                    <a href="https://www.maccosmetics.com.hk/offer-details?gclid=CjwKCAjw9e6SBhB2EiwA5myr9tR12u2eMH65kAmWITXG6LlGMCfl1bfgPF1dQR6WpDC6MdF6MYCk4BoC58gQAvD_BwE&gclsrc=aw.ds">M.A.C</a>
+                </span>
+            </div>
+            <div class="follow">
+                <div class="follow1">Follow Us</div>
+                <div class="link1">
+                    <a href="http://facebook.com"><img src="fb.png"></a>
+                    <a href="http://line.me"><img src="line.png"></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

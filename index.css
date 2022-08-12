@@ -1,0 +1,589 @@
+/*header css*/
+.header {
+    background: url(bg4.png) center no-repeat;
+    background-position: center;
+    border: 2px solid black;
+    border-radius: 5px 5px;
+    height: 300px;
+    max-width: 90%;
+    margin: 30px 150px;
+    padding: 10px;
+    text-align: center;
+}
+
+/*image css*/
+.header img,
+.article img {
+    width: 200px;
+    height: 200px;
+    border-radius: 100px 100px;
+    padding: 5px;
+    margin: 10px;
+}
+
+/*h2 css*/
+.header h2 {
+    margin: 0px;
+    color: pink;
+    text-shadow: 3px 3px 3px #000000;
+    font-size: 300%;
+}
+
+/*setting sidebar*/
+#sidebar {
+    height: 0;
+    width: 100%;
+    transition: 0.5s;
+    background-color: #de9d9d;
+    overflow: hidden;
+}
+
+/*setting the "X" button*/
+.closeSide {
+    background: none;
+    color: aliceblue;
+    font-weight: bold;
+    border: none;
+    font-size: 125%;
+}
+
+/*setting "Home" and "Post"*/
+.form,
+.index {
+    background-color: ghostwhite;
+    padding: 2px 2px;
+    color: #fd8ca0;
+    border-radius: 5px 5px;
+    box-shadow: 3px 3px 3px grey;
+    border: 2px solid pink;
+    font-weight: bold;
+}
+
+/*setting "Home" and "Post" when the mouse us hover*/
+.form:hover,
+.index:hover {
+    transform: scale(1.1);
+}
+
+/*setting nav*/
+.nav {
+    margin: 0px;
+    padding: 10px 10px;
+    background-color: #fad9df;
+    border-bottom: 2px solid black;
+    height: 50px;
+}
+
+.search_box {
+    float: right;
+}
+
+/*setting for the search textbox box*/
+.search_box input {
+    border-radius: 15px 15px;
+    background-color: ghostwhite;
+    box-shadow: 2px 0px 2px white;
+}
+
+.side button {
+    float: right;
+}
+
+.Side {
+    margin: 0px;
+    padding: 0px;
+}
+
+/*area of hamburger button*/
+.openSide {
+    height: 30px;
+    width: 28px;
+    background: none;
+    border: none;
+    padding: 0px;
+    transform: translateY(-13px);
+}
+
+/* hamburger bars*/
+.bar1,
+.bar2,
+.bar3 {
+    height: 4px;
+    width: 28px;
+    background-color: white;
+    border: none;
+    font-size: 0px;
+}
+
+.bar1 {
+    margin-bottom: 5px;
+}
+
+.bar2 {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.bar3 {
+    margin-top: 5px;
+}
+
+a {
+    text-decoration: none;
+    color: hotpink;
+}
+
+/*setting button in search_box*/
+.search_box button {
+    background: none;
+    border: none;
+    color: #ff6d86;
+    border-radius: 20px 20px;
+}
+
+/*setting button in search_box when mouse is hover*/
+.search_box button:hover {
+    transform: scale(1.3);
+}
+
+/*desc column*/
+.about {
+    height: 230px;
+    width: 900p;
+    background-color: antiquewhite;
+    margin: 20px 20px;
+    padding: 10px 10px;
+    display: flex;
+    justify-content: space-evenly;
+    border-radius: 5px 5px;
+}
+
+.introduction,
+.hello {
+    display: inline-flex;
+}
+
+/*setting intro header*/
+.introduction h3 {
+    column-span: all;
+    color: deeppink;
+    text-shadow: 5px 5px 5px pink;
+}
+
+/*setting intro paragraph*/
+.introduction p {
+    padding: 10px 15px;
+    column-count: 3;
+    column-gap: 80px;
+    column-rule: 4px solid #a7a2a2;
+    width: 900px;
+    max-height: 200px;
+    font-size: 110%;
+    color: lightcoral;
+}
+
+/*setting the word "CubeInn*/
+.introduction em {
+    font-size: 130%;
+    color: #fc9cac;
+    text-shadow: 2px 2px 2px grey;
+}
+
+/*setting for highlighted words*/
+.introduction strong {
+    font-size: 110%;
+    color: #f890c9;
+}
+
+/*setting "Hello" image*/
+.hello img {
+    border-radius: 10px 10px;
+    border: 3px solid black;
+    max-height: 230px;
+    max-width: 450px;
+}
+
+/*article css*/
+.article {
+    padding: 10px 10px;
+    border-top: 3px solid #959292;
+    border-bottom: 3px solid #959292;
+    height: 400px;
+    display: flex;
+    justify-content: space-evenly;
+    cursor: pointer;
+}
+
+.heading {
+    padding: 30px 20px;
+    text-align: center;
+}
+
+.heading h3 {
+    color: hotpink;
+    text-shadow: 3px 3px 3px pink;
+}
+
+.Latest {
+    color: papayawhip;
+    font-weight: 900;
+    animation-duration: 0.8s;
+    animation-name: Latest;
+    animation-iteration-count: infinite;
+    font-size: 27px;
+    margin: auto;
+    padding: 0;
+}
+
+/* give a flashing effect to "Latest Product" /
+/* This effect made by 2 part of css code the first one is 'Latest' and senend is the '@keyframes Latest'
+this 2 code conncet by the 'animation-name: Latest'*/
+
+@keyframes Latest {
+    0% {
+        color: papayawhip;
+    }
+
+    25% {
+        color: pink;
+    }
+
+    50% {
+        color: palevioletred;
+    }
+}
+
+/*setting images of products*/
+.content1 img,
+.content2 img,
+.content3 img {
+    border-radius: 2px 2px;
+    border: 2px solid grey;
+    padding: 0px;
+    height: 235px;
+}
+
+/*setting images of products when the mouse is hover*/
+.content1:hover,
+.content2:hover,
+.content3:hover {
+    transform: scale(1.1);
+}
+
+.content3 img:hover {
+    transform: scale(0.9);
+    border: 5px solid pink;
+}
+
+/*setting iframe in product 1*/
+.content1 iframe {
+    width: 200px;
+    height: 235px;
+}
+
+/*setting area of product in latest*/
+.content1,
+.content2,
+.content3 {
+    margin: 50px 40px;
+    padding: 10px 10px;
+    height: 283px;
+    width: 250px;
+    background-color: #ffd1d8;
+    display: inline-block;
+    border-radius: 10px 10px;
+    box-shadow: 5px 5px 5px grey;
+    font-size: 80%;
+    font-weight: bold;
+    text-align: center;
+    overflow: hidden;
+    transition: 0.5s;
+}
+
+/*footer css*/
+.footer {
+    margin: 0;
+    padding: 10px 20px;
+    height: 80px;
+    background-color: #fad9df;
+    color: grey;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.link {
+    height: 60px;
+    width: 600px;
+    display: flex;
+    font-size: 130%;
+    padding-top: 20px;
+    justify-content: space-evenly;
+}
+
+.site {
+    padding-top: 5px;
+}
+
+.link span {
+    font-size: 120%;
+    color: hotpink;
+    text-shadow: 5px 5px 5px white;
+}
+
+.follow {
+    height: 60px;
+    padding-top: 20px;
+    display: flex;
+    font-size: 130%;
+}
+
+.follow1 {
+    width: 120px;
+    padding-top: 5px;
+}
+
+.link1 {
+    width: 200px;
+}
+
+.follow img {
+    height: 40px;
+    width: 40px;
+    padding: 3px 3px;
+    border-radius: 25px;
+}
+
+/*effect when width is smaller than 1200px and greater than 600px*/
+@media only screen and (min-width: 600px) and (max-width: 1200px) {
+    .header {
+        border-radius: 100px;
+        margin: 50px 80px;
+    }
+
+    /*changes of positions of the intro and "Hello" image*/
+    .about {
+        display: flex;
+        flex-flow: row-reverse nowrap;
+        justify-content: center;
+        background-color: azure;
+        border-radius: 100px;
+    }
+
+    /*hide header*/
+    .introduction h3 {
+        display: none;
+    }
+
+    .introduction p {
+        column-count: 1;
+        width: 600px;
+        column-gap: normal;
+        column-rule: 2px solid pink;
+        font-size: 99%
+    }
+
+    .hello img {
+        width: 200px;
+        height: 200px;
+        border: none;
+        border-radius: 50px;
+    }
+
+    .article {
+        height: 350px;
+        max-width: 1200px;
+        background-color: antiquewhite;
+    }
+
+    .content1,
+    .content2,
+    .content3 {
+        margin: 10px 15px;
+        height: 300px
+    }
+
+    /*move the images into correct positions*/
+    .content1 img {
+        transform: translateX(-5px);
+    }
+
+    /*move the images into correct positions*/
+    .content2 img,
+    .content3 img {
+        transform: translate(-5px, 18px);
+        margin: 30p
+    }
+
+    /*reallocate footer's items*/
+    .footer {
+        height: 130px;
+        display: flex;
+        justify-content: space-evenly;
+    }
+
+    .link {
+        display: inline-block;
+        padding: 10px 20px;
+    }
+
+    .link span {
+        padding: 0px 20px;
+    }
+
+    .follow {
+        display: inline-block;
+        padding: 0px 20px;
+    }
+
+    .follow img {
+        margin: 5px;
+    }
+}
+
+/* effects when width is smaller than 500px*/
+@media only screen and (max-width: 500px) {
+
+    /*reallocate the direction of all fields*/
+    .container {
+        display: flex;
+        flex-flow: column wrap-reverse;
+        height: 2100px;
+    }
+
+    /*reallocate the direction of the nav fields*/
+    .nav {
+        flex-flow: row-reverse;
+    }
+
+    /*reallocate the direction of the sidebar fields*/
+    #sidebar {
+        display: flex;
+        flex-flow: row-reverse;
+        background-color: pink;
+    }
+
+    .header {
+        border: none;
+        min-width: 300px;
+        margin: 20px 0px;
+        padding: 10px;
+        order: 2;
+        height: 150px;
+    }
+
+    /*enlarge the header image*/
+    .header img {
+        transform: scale(1.05);
+        margin: 0;
+        padding: 0;
+        border: 4px dotted pink;
+        transform: translate(-4px, 5px);
+    }
+
+    .closeSide {
+        margin: 5px;
+    }
+
+    .about {
+        height: 250px;
+        order: 3;
+        max-width: 500px;
+        background-color: whitesmoke;
+        border-radius: 20px 20px;
+    }
+
+    .introduction {
+        height: 300px;
+    }
+
+    .introduction p {
+        font-size: 50%;
+        column-count: 2;
+        column-gap: 23px;
+        height: 250px;
+        width: 400px;
+        padding: 0px 40px;
+        margin: 20px;
+        column-rule: 4px dotted pink;
+    }
+
+    .introduction em,
+    .introduction strong {
+        text-shadow: 0 0 0 white;
+        color: hotpink;
+    }
+
+    /*hide fields*/
+    .hello img,
+    .introduction h3,
+    .heading img,
+    .link,
+    .header h2 {
+        display: none;
+    }
+
+    .article {
+        height: 1400px;
+        flex-flow: row wrap;
+        order: 1;
+    }
+
+    .heading h3 {
+        font-size: 300%;
+        margin: 0;
+        padding: 10px 75px;
+        color: #9d9dd9;
+        border: 2px dotted #d899a4;
+        border-radius: 5px;
+    }
+
+    /*setting products area*/
+    .content1,
+    .content2,
+    .content3 {
+        width: 80%;
+        background-color: #faa6d0;
+        font-size: 105%;
+        margin: auto;
+        border: 3px solid grey;
+    }
+
+    .content1 img,
+    .content2 img,
+    .content3 img {
+        transform: scale(0.9);
+        border-radius: 20px;
+    }
+
+    /*setting color different from the original effect when under this condition*/
+    .content1:hover,
+    .content2:hover,
+    .content3:hover {
+        color: blueviolet;
+    }
+
+    .footer {
+        order: 4;
+        height: 100px;
+        margin: 10px;
+        border-radius: 20px;
+        text-align: center;
+        background-color: antiquewhite;
+        border: 2px solid grey;
+    }
+
+    .follow {
+        margin: 0px;
+        padding: 25px;
+        color: firebrick;
+        font-size: 130%;
+    }
+
+    .follow img {
+        height: 50px;
+        width: 50px;
+        padding: 5px;
+        margin-left: 8px;
+        border-radius: 25px;
+    }
+}

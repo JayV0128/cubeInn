@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>CubeInn</title>
+    <link rel="stylesheet" href="ProductDesc.css">
+    <link rel="stylesheet" href="index.css">
+    <link rel="icon" type="image/x-icon" href="favicon.jpeg">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <script src="ProductDesc.js"></script>
+    <div class="container1">
+        <div class="header1">
+            <div class="headtitle">CubeInn</div>
+            <img src="Logo.jpeg">
+            <button class="index"><a href="index.html">Home</a></button>
+            <button class="form"><a href="form1.html">&nbsp;Post&nbsp;</a></button>
+            <div class="search_box">
+                <input type="text" placeholder=" Search for Items ">
+                <button type="submit">
+                    <x class="fa fa-search"></x>
+                </button>
+            </div>
+        </div>
+        <!--setting up main body-->
+        <div class="product">
+            <div class="sidephoto">
+                <!--call method translatetype() to perform visual effect by mouseover and mouseout-->
+                <div class="title" id="title" onmouseover="translatetype(1)" onmouseout="translatetype(2)">MY TWEEDY</div>
+                <!--call method sidephoto() to change the main photo to be the same photo as the side photo-->
+                <div><img src="MAC2.png" id="p1" onclick="sidephoto(1)"></div>
+                <div><img src="MAC.png" id="p2" onclick="sidephoto(2)"></div>
+                <div><img src="MAC1.png" id="p3" onclick="sidephoto(3)"></div>
+            </div>
+            <!--call method headcolor() to change title color in the product description part-->
+            <div class="mainphoto" id="m1" onmouseover="headcolor(1)" onmouseout="headcolor(2)">
+                <div class="middle">
+                    <img src="MAC1.png" id="mainphoto">
+                    <div class="rangebar">
+                        <!--call method photosize() to change the photo size of the main photo in between 100% and 150%-->
+                        <!--call method resetphotosize() when the mouse moves out the range bar-->
+                        100%<input type="range" id="range" value="0" onchange="photosize()" onmouseout="resetphotosize()">150%
+                    </div>
+                </div>
+            </div>
+            <div class="productdesc">
+                <div class="name" id="name">
+                    <x id="name1">MY TWEEDY</x> | Best Selling Product
+                    <div class="discount1" id="discount1">*20% Discount for Ordering More than 3*</div>
+                </div>
+                <div class="price">
+                    <!--perform warning message if the user enters 0 in the input area-->
+                    <!--call method totalPrice() to calculate the total price with the inputted value of qty-->
+                    <!--method(this.value) means the current value of the input area by the users-->
+                    <input type="text" id="number" value="1" pattern="([0-9]{2,}|[1-9]{1,})" title="The quantity cannot be zero" oninput="totalPrice(this.value)">
+                    <!--call method plus() to add 1 qty if the "+" button is clicked-->
+                    <button class="plus" id="plus" onclick="plus()">+</button>
+                    <!--call method minus() to minus 1 qty if the "-" button is clicked-->
+                    <button class="substract" id="substract" onclick="minus()">-</button>
+                    <div class="totalA">
+                        <!--display total amount-->
+                        <output id="totalAmount">&nbsp;HK$190</output>
+                        <output id="discount"></output>
+                    </div>
+                </div>
+                <div class="type" id="type">
+                    <div class="type1">OTHER COLOURS:</div>
+                    <div class="typeimg">
+                        <!--call methods changephoto() and changeqty() to perform the case of photo change and quantity change-->
+                        <img src="MAC2-2.png" id="t1" onclick="changephoto(1);changeqty(0);">
+                        <img src="MAC3-3.png" id="t2" onclick="changephoto(2);changeqty(1);">
+                        <img src="MAC1.png" id="t3" onclick="changephoto(3);changeqty(2);">
+                    </div>
+                </div>
+                <div class="add">
+                    <button class="buy" id="buy">BUY NOW</button>
+                    <button class="addto" id="addto">ADD TO CART</button>
+                </div>
+            </div>
+        </div>
+        <div class="recommend">
+            <div class="rate">
+                <h3>Rating</h3><span>&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+            </div>
+            <div class="comments">
+                <h3>Comments</h3>Yes, it is so beautiful and I will recommend it to my friends!!
+            </div>
+            <div class="rating">
+                <!--call method lightedstar() to perform rating function-->
+                <h3>Give Your Rating!!!</h3>
+                <img src="lightstar.png" id="ls1">
+                <img src="blackstar.png" id="b1" onclick="lightedstar(1)">
+                <img src="blackstar.png" id="b2" onclick="lightedstar(2)">
+                <img src="blackstar.png" id="b3" onclick="lightedstar(3)">
+                <img src="blackstar.png" id="b4" onclick="lightedstar(4)">
+                <img src="blackstar.png" id="b5" onclick="lightedstar(5)">
+                <!--call method clearstar() and warning() if "clear" is clicked-->
+                <button class="clear" onclick="clearstar();warning();">Clear</button>
+            </div>
+            <div class="addcomment">
+                <div class="title1">Add Your Comments:</div>
+                <textarea id="text1" cols="30" rows="3" placeholder="Put Your Comments Here..."></textarea>
+            </div>
+            <!--call method thankcomment() if "Send" is clicked-->
+            <div class="submitbtn" id="submitbtn" onclick="thankcomment();return false"><button type="submit">Send</button></div>
+        </div>
+        <div class="footer">
+            <div class="link">
+                <div class="site">SITE LINKS</div>
+                <span><a href="form1.html">Form</a></span>
+                <span>
+                    <a href="https://www.dior.com/zh_hk?gclid=CjwKCAjw9e6SBhB2EiwA5myr9n86Y5lPXSos9Xm2vKFvb2dZYo0H3RRZ_utTg8gxBuHh_r3TmZZSiRoCoaMQAvD_BwE">Dior</a>
+                </span>
+                <span><a href="https://www.yslbeauty.com.hk/">YSL</a></span>
+                <span>
+                    <a href="https://www.maccosmetics.com.hk/offer-details?gclid=CjwKCAjw9e6SBhB2EiwA5myr9tR12u2eMH65kAmWITXG6LlGMCfl1bfgPF1dQR6WpDC6MdF6MYCk4BoC58gQAvD_BwE&gclsrc=aw.ds">M.A.C</a>
+                </span>
+            </div>
+            <div class="follow">
+                <div class="follow1">Follow Us</div>
+                <div class="link1">
+                    <a href="http://facebook.com"><img src="fb.png"></a>
+                    <a href="http://line.me"><img src="line.png"></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

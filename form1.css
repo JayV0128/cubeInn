@@ -1,0 +1,125 @@
+/*image css*/
+
+.header img:hover {
+    transform: scale(1.1);
+}
+
+/*form css*/
+.sellform {
+    margin: 15px 20% 5px 20%;
+}
+
+fieldset {
+
+    padding-left: 3%;
+    border-color: hotpink;
+    border-radius: 15px;
+    font-size: 18px;
+    background-color: snow;
+    width: 100%;
+}
+
+legend {
+    text-align: left;
+    font-size: 22px;
+    font-family: fantasy;
+    color: hotpink;
+}
+
+.priceWord,
+.phoneWord,
+.productWord,
+.brandWord,
+.qtyWord,
+.emailWord {
+    margin: 5px 0px;
+    margin-right: 6px;
+}
+
+.productName input,
+.inputPrice input,
+.brandName input,
+.custName input,
+.email input,
+.phoneNo input {
+    width: 200px;
+    border-radius: 8px;
+    margin: 5px 0px;
+
+}
+
+.QTY input {
+    width: 50px;
+    border-radius: 8px;
+    margin: 5px 0px;
+}
+
+.descWord {
+    margin: 10px;
+}
+
+.descTitle {
+    text-shadow: 5px 5px 6px gray;
+}
+
+#desc1 {
+    border-color: hotpink;
+    border-radius: 15px;
+}
+
+.submit,
+.clear {
+    font-size: 15px;
+    width: 120px;
+    height: 25px;
+    margin: 5px;
+    background-color: lightpink;
+    border-radius: 10px;
+}
+
+.error3,
+.error4 {
+    color: snow;
+    display: inline-block;
+    width: 330px;
+    text-align: center;
+    font-size: 80%;
+}
+
+.error6,
+.error7 {
+    color: snow;
+    display: inline-block;
+    width: 310px;
+    text-align: center;
+    font-size: 80%;
+}
+
+.inputPrice,
+.phoneNo,
+.upload,
+.productName,
+.brandName,
+.QTY,
+.email2 {
+    display: flex;
+}
+
+.numOnly,
+.HKnoOnly,
+.error1,
+.error2,
+.error5 {
+    color: snow;
+    margin: 0px 15px;
+    padding-top: 8px;
+    font-family: sans-serif;
+    font-size: 80%;
+}
+
+.emfile {
+    color: snow;
+    margin: 0px 15px;
+    font-family: sans-serif;
+    font-size: 80%;
+}
